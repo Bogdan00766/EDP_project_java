@@ -13,6 +13,6 @@
     <TextField fx:id="imie1TextField" promptText="Twoje imię" />
     <TextField fx:id="imie2TextField" promptText="Imię drugiej połówki" />
     <CheckBox fx:id="pewnyCheckBox" mnemonicParsing="false" text="Jesteś pewny/pewna?" />
-    <Button onAction="#onHelloButtonClick" text="Sprawdź!" textFill="#ff007b" />
+    <Button onAction="#onSprawdzButtonClick" text="Sprawdź!" textFill="#ff007b" />
    <Label fx:id="wynikText" />
 </VBox>
