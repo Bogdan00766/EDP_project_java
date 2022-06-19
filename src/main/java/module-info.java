@@ -4,6 +4,8 @@ module com.example.edp_project {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires java.net.http;
+    requires com.google.gson;
 
     opens com.example.edp_project to javafx.fxml;
     exports com.example.edp_project;

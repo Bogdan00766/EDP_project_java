@@ -32,7 +32,9 @@ public class HelloController {
             wynikText.setText(("Zaznacz pole pewności"));
             return;
         }
-
+        Request request = new Request();
+        var procenty = request.CheckLove(imie1TextField.getText(), imie2TextField.getText());
+        wynikText.setText("Poziom zgodności wynosi: " + procenty);
 
 
 
