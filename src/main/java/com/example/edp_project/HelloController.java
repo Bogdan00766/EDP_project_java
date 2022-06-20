@@ -33,8 +33,8 @@ public class HelloController {
             return;
         }
         Request request = new Request();
-        var procenty = request.CheckLove(imie1TextField.getText(), imie2TextField.getText());
-        wynikText.setText("Poziom zgodności wynosi: " + procenty);
+        var lr = request.CheckLove(imie1TextField.getText(), imie2TextField.getText());
+        wynikText.setText("Poziom zgodności wynosi: " + lr.percentage + "\n" + lr.result);
 
 
 

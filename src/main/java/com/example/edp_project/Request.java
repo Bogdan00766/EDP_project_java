@@ -5,11 +5,15 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
+import java.util.function.Supplier;
+
 import com.google.gson.Gson;
-public class Request extends Thread{
+public class Request{
 
 
-    public int CheckLove(String name1, String name2){
+    public LoveResponseDto CheckLove(String name1, String name2){
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://love-calculator.p.rapidapi.com/getPercentage?sname=" + name1 +"&fname=" + name2))
@@ -17,14 +21,15 @@ public class Request extends Thread{
                 .header("X-RapidAPI-Host", "love-calculator.p.rapidapi.com")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
+        CompletableFuture<HttpResponse<String>> cfResponse;
         HttpResponse<String> response;
         try {
-            response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException | InterruptedException e) {
+            cfResponse = HttpClient.newHttpClient().sendAsync(request, HttpResponse.BodyHandlers.ofString());
+            response = cfResponse.join();
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-        LoveResponseDto lr = new Gson().fromJson(response.body(), LoveResponseDto.class);
-        return lr.percentage;
+        return new Gson().fromJson(response.body(), LoveResponseDto.class);
     }
 }
