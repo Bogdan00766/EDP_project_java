@@ -40,9 +40,13 @@ public class PropertiesManager {
 
         try{
             instream.close();
-        } catch (IOException ioe){};
+        } catch (IOException ioe){
+            System.out.println(ioe.getMessage());
+        }
     }
 
 
-
+    public String getProperty(String name) {
+        return props.getProperty(name);
+    }
 }

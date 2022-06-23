@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f32eb4b7-da8c-4765-af95-3b7ffb416feb" name="Changes" comment="Added CompletableFuture to Request">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
+    <list default="true" id="f32eb4b7-da8c-4765-af95-3b7ffb416feb" name="Changes" comment="Implmented Properties">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DbContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/PropertiesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/PropertiesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655723234042</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implmented Properties">
+      <created>1655989344316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655989344316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,7 +140,8 @@
     <MESSAGE value="Updated conditions in main page" />
     <MESSAGE value="Added Request" />
     <MESSAGE value="Added CompletableFuture to Request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CompletableFuture to Request" />
+    <MESSAGE value="Implmented Properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implmented Properties" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,6 @@
 package com.example.edp_project;
 
+import Database.DbContext;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -36,7 +37,14 @@ public class HelloController {
         var lr = request.CheckLove(imie1TextField.getText(), imie2TextField.getText());
         wynikText.setText("Poziom zgodności wynosi: " + lr.percentage + "\n" + lr.result);
 
-
+        DbContext dbContext = new DbContext();
+        dbContext.start();
+        dbContext.Insert(lr.sname, lr.fname, lr.percentage);
+        try {
+            dbContext.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
