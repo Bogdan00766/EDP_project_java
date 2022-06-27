@@ -8,6 +8,7 @@ module com.example.edp_project {
     requires com.google.gson;
     requires java.sql;
     requires guava;
+    requires org.apache.commons.configuration2;
 
     opens com.example.edp_project to javafx.fxml;
     exports com.example.edp_project;

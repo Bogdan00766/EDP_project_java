@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <Dname>org.xerial.Driver</Dname>
+    <URL>jdbc:sqlite:C:/Users/pchud/IdeaProjects/EDP_project/src/main/java/db.db</URL>
+</configuration>

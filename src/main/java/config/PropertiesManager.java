@@ -1,16 +1,16 @@
 package config;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+import org.apache.commons.configuration2.XMLConfiguration;
+import org.apache.commons.configuration2.builder.fluent.Configurations;
+import org.apache.commons.configuration2.ex.ConfigurationException;
 
 public class PropertiesManager {
-    private static final String PROPERTIES_FILE = "app.properties";
-    private Properties props = null;
+    private static final String PROPERTIES_FILE = "properties.xml";
+    private XMLConfiguration config = null;
     private static PropertiesManager instance;
 
     public PropertiesManager(){
-        loadProperties(PROPERTIES_FILE);
+        loadProperties();
     }
 
     public static PropertiesManager getInstance(){
@@ -19,34 +19,19 @@ public class PropertiesManager {
         }
         return instance;
     }
-    private void loadProperties(String filename) {
-        props = new Properties();
-        InputStream instream = null;
+    private void loadProperties() {
+        Configurations configs = new Configurations();
 
-        ClassLoader loader = this.getClass().getClassLoader();
-        instream = loader.getResourceAsStream(filename);
-        if(instream == null){
-            System.err.println("Unable to open propeties file " + filename);
-            return;
-        }
-
-        try{
-            props.load(instream);
-        }
-        catch (IOException e){
-            System.err.println("Error reading properties file " + filename);
-            System.err.println(e.getMessage());
-        }
-
-        try{
-            instream.close();
-        } catch (IOException ioe){
-            System.out.println(ioe.getMessage());
+        try {
+            config = configs.xml(PropertiesManager.PROPERTIES_FILE);
+            System.out.println("XD");
+        } catch (ConfigurationException e) {
+            System.out.println(e.getMessage());
         }
     }
 
 
     public String getProperty(String name) {
-        return props.getProperty(name);
+        return config.getString(name);
     }
 }

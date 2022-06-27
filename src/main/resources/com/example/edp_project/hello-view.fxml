@@ -8,11 +8,6 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <FlowPane prefHeight="29.0" prefWidth="680.0">
-      <children>
-         <Button fx:id="historyButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onHistoryButtonClick" text="History" />
-      </children>
-   </FlowPane>
 
     <Label fx:id="welcomeText" text="Is it your true love?" />
     <TextField fx:id="imie1TextField" promptText="Your name" />
@@ -20,4 +15,6 @@
     <CheckBox fx:id="pewnyCheckBox" mnemonicParsing="false" text="Are you sure?" />
     <Button onAction="#onSprawdzButtonClick" text="Test!" textFill="#ff007b" />
    <Label fx:id="wynikText" />
+   <Button fx:id="historyButton" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onHistoryButtonClick" text="History" textAlignment="CENTER" />
+   <FlowPane prefHeight="29.0" prefWidth="680.0" />
 </VBox>

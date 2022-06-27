@@ -21,6 +21,7 @@ public class HelloController {
     public Label wynikText;
     @FXML
     public CheckBox pewnyCheckBox;
+    public Button historyButton;
     @FXML
     private Label welcomeText;
 

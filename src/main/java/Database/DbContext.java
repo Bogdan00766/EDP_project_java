@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DbContext extends Thread{
-    private Object executioner;
+    private final Object executioner;
     String url;
     Connection con = null;
     private String type;
@@ -35,7 +35,7 @@ public class DbContext extends Thread{
     }
     public List<LoveHistoryDto> Read(){
         if (con == null) return null;
-        List<LoveHistoryDto> list = new ArrayList<LoveHistoryDto>();
+        List<LoveHistoryDto> list = new ArrayList<>();
         try {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(
