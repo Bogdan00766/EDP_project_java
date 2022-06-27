@@ -1,4 +1,7 @@
 package Database;
+import com.example.edp_project.Events.DbSavingDoneEvent;
+import com.example.edp_project.Events.EventListener;
+import com.google.common.eventbus.EventBus;
 import config.PropertiesManager;
 
 import java.sql.*;
@@ -53,10 +56,16 @@ public class DbContext extends Thread{
             String sqlString = "INSERT INTO LoveHistory (name1, name2, percentage) VALUES (" + '"' + name1 + '"' + ',' + '"' + name2 + '"' + ',' + percentage+ ")";
             Statement st = con.createStatement();
             st.executeUpdate(sqlString);
+            DbSavingDoneEvent event = new DbSavingDoneEvent();
+            EventBus eb = new EventBus();
+            EventListener listener = new EventListener();
+            eb.register(listener);
+            eb.post(event);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         CloseConnection();
+
     }
     private void SetConnection() {
         try {

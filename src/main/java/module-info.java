@@ -7,7 +7,10 @@ module com.example.edp_project {
     requires java.net.http;
     requires com.google.gson;
     requires java.sql;
+    requires guava;
 
     opens com.example.edp_project to javafx.fxml;
     exports com.example.edp_project;
+    exports com.example.edp_project.Events;
+    opens com.example.edp_project.Events to javafx.fxml;
 }
