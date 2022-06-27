@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f32eb4b7-da8c-4765-af95-3b7ffb416feb" name="Changes" comment="minor changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/Events/DbSavingDoneEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/Events/EventListener.java" afterDir="false" />
+    <list default="true" id="f32eb4b7-da8c-4765-af95-3b7ffb416feb" name="Changes" comment="Created Events with EventBus">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/SimpleLoveProperty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/DbContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DbContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/edp_project/Events/EventListener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HistoryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HistoryViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/edp_project/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/edp_project/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/edp_project/history-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/edp_project/history-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656325495483</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created Events with EventBus">
+      <created>1656328924962</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656328924962</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,7 +177,8 @@
     <MESSAGE value="Created Database on new thread" />
     <MESSAGE value="Created Database on new thread2" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="Created Events with EventBus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Events with EventBus" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,13 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.edp_project.HistoryViewController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.edp_project.HistoryViewController">
    <children>
-      <TableView fx:id="historyTV" layoutX="14.0" layoutY="14.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
+      <TableView fx:id="historyTV" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="581.0">
       </TableView>
    </children>
 </AnchorPane>

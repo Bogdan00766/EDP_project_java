@@ -1,6 +1,5 @@
 package Database;
 import com.example.edp_project.Events.DbSavingDoneEvent;
-import com.example.edp_project.Events.EventListener;
 import com.google.common.eventbus.EventBus;
 import config.PropertiesManager;
 
@@ -9,9 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DbContext extends Thread{
+    private Object executioner;
     String url;
     Connection con = null;
     private String type;
+    public DbContext(Object o){
+        executioner = o;
+    }
     @Override
     public void start(){
         SetConnection();
@@ -30,8 +33,8 @@ public class DbContext extends Thread{
         }
         return lhd;
     }
-    public void Read(){
-        if (con == null) return;
+    public List<LoveHistoryDto> Read(){
+        if (con == null) return null;
         List<LoveHistoryDto> list = new ArrayList<LoveHistoryDto>();
         try {
             Statement st = con.createStatement();
@@ -45,10 +48,12 @@ public class DbContext extends Thread{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        CloseConnection();
 
+        CloseConnection();
+        return list;
 
     }
+
     public void Insert(String name1, String name2, int percentage)  {
         try {
             if (con == null) return;
@@ -58,8 +63,7 @@ public class DbContext extends Thread{
             st.executeUpdate(sqlString);
             DbSavingDoneEvent event = new DbSavingDoneEvent();
             EventBus eb = new EventBus();
-            EventListener listener = new EventListener();
-            eb.register(listener);
+            eb.register(executioner);
             eb.post(event);
         } catch (SQLException e) {
             throw new RuntimeException(e);

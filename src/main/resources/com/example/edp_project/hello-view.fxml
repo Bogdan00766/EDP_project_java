@@ -8,11 +8,16 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <FlowPane prefHeight="29.0" prefWidth="680.0">
+      <children>
+         <Button fx:id="historyButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onHistoryButtonClick" text="History" />
+      </children>
+   </FlowPane>
 
-    <Label fx:id="welcomeText" text="Czy pisana jest wam wieczna miłość? " />
-    <TextField fx:id="imie1TextField" promptText="Twoje imię" />
-    <TextField fx:id="imie2TextField" promptText="Imię drugiej połówki" />
-    <CheckBox fx:id="pewnyCheckBox" mnemonicParsing="false" text="Jesteś pewny/pewna?" />
-    <Button onAction="#onSprawdzButtonClick" text="Sprawdź!" textFill="#ff007b" />
+    <Label fx:id="welcomeText" text="Is it your true love?" />
+    <TextField fx:id="imie1TextField" promptText="Your name" />
+    <TextField fx:id="imie2TextField" promptText="Name of your love" />
+    <CheckBox fx:id="pewnyCheckBox" mnemonicParsing="false" text="Are you sure?" />
+    <Button onAction="#onSprawdzButtonClick" text="Test!" textFill="#ff007b" />
    <Label fx:id="wynikText" />
 </VBox>
