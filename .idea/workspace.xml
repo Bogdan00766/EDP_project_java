@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f32eb4b7-da8c-4765-af95-3b7ffb416feb" name="Changes" comment="Implmented Properties">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DbContext.java" afterDir="false" />
+    <list default="true" id="f32eb4b7-da8c-4765-af95-3b7ffb416feb" name="Changes" comment="Created Database on new thread2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HistoryViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/edp_project/history-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/edp_project/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/PropertiesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/PropertiesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DbContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DbContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/LoveHistoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/LoveHistoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -120,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655989344316</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created Database on new thread">
+      <created>1655994953937</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655994953937</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created Database on new thread2">
+      <created>1655994962582</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655994962582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,7 +156,9 @@
     <MESSAGE value="Added Request" />
     <MESSAGE value="Added CompletableFuture to Request" />
     <MESSAGE value="Implmented Properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implmented Properties" />
+    <MESSAGE value="Created Database on new thread" />
+    <MESSAGE value="Created Database on new thread2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Database on new thread2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

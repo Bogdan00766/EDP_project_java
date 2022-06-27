@@ -2,6 +2,8 @@ package Database;
 import config.PropertiesManager;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DbContext extends Thread{
     String url;
@@ -12,9 +14,22 @@ public class DbContext extends Thread{
         SetConnection();
     }
 
+    private LoveHistoryDto CreateLoveHistoryDto(ResultSet rs){
+        LoveHistoryDto lhd = new LoveHistoryDto();
+        try {
+            lhd.setId(rs.getInt("Id"));
+            lhd.setName1(rs.getString("Name1"));
+            lhd.setName2(rs.getString("Name2"));
+            lhd.setPercentage(rs.getInt("Percentage"));
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+        return lhd;
+    }
     public void Read(){
         if (con == null) return;
-
+        List<LoveHistoryDto> list = new ArrayList<LoveHistoryDto>();
         try {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(
@@ -22,13 +37,14 @@ public class DbContext extends Thread{
             );
 
             while (rs.next()){
-                System.out.println((rs.getString("name1")));
+                list.add(CreateLoveHistoryDto(rs));
             }
-            System.out.println("DONE");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         CloseConnection();
+
+
     }
     public void Insert(String name1, String name2, int percentage)  {
         try {
